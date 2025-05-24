@@ -1,0 +1,22 @@
+{
+  "name": "squid-game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node game.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

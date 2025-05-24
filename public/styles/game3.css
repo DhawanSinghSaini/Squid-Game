@@ -1,0 +1,394 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Jersey 15", serif; /* Apply font style to the entire document */
+    background-color: #7f0000;
+}
+
+.playground {
+    width: 70vw;
+    height: 100vh;
+    border: 2px solid black;
+    background-image: url('../images/sandbg.webp'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire playground */
+    background-position: center; /* Centers the image */
+    position: relative;
+}
+
+.top-image, .bottom-image, .top-image-closed, .bottom-image-closed {
+    width: 300px; /* Fixed width */
+    height: 30vh; /* Maintain aspect ratio */
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1.5s ease-in-out; /* Slower transition */
+}
+
+.top-image {
+    top: 0;
+    transform: translateX(-50%) rotate(180deg); /* Flips the image upside down */
+    opacity: 0; /* Initially hidden */
+}
+
+.top-image-closed {
+    top: 0;
+    transform: translateX(-50%) rotate(180deg); /* Flips the image upside down */
+    opacity: 1; /* Initially visible */
+}
+
+.bottom-image {
+    bottom: 0;
+    transform: translateX(-50%);
+    opacity: 0; /* Initially hidden */
+}
+
+.bottom-image-closed {
+    bottom: 0;
+    transform: translateX(-50%);
+    opacity: 1; /* Initially visible */
+}
+
+.marbles {
+    display: flex;
+    flex-wrap: wrap; /* Allows the marbles to wrap */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    margin: 2vh 0; /* Adds margin to the flexbox */
+    transition: opacity 1.5s ease-in-out; /* Slower transition for marbles */
+}
+
+.top-marbles {
+    top: 15vh; /* Adjust the position as needed */
+}
+
+.bottom-marbles {
+    bottom: 15vh; /* Adjust the position as needed */
+}
+
+.marble {
+    width: 10%; /* Increased size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0.5%; /* Adjust the spacing as needed */
+}
+
+.button-container {
+    position: absolute;
+    bottom: 35vh; /* Position it above the number selector */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+    z-index: 1;
+}
+
+.odd-button, .even-button {
+    padding: 10px 20px; /* Adjust the padding as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+    cursor: pointer;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.odd-button:hover, .even-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.guess-label {
+    position: absolute;
+    bottom: 30vh; /* Position it above the number selector */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px; /* Adjust the font size as needed */
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+.number-selector {
+    position: absolute;
+    bottom: 28vh; /* Position it above the player's marbles */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+    text-align: center;
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+.message-container {
+    position: absolute;
+    top: 50%; /* Position it in the middle */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center; /* Center-align the text */
+}
+
+.message {
+    font-size: 18px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: red; /* Adjust the color as needed */
+}
+
+.flash-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px; /* Rounded corners */
+}
+
+.flash-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.flash-card-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.proceed-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.proceed-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.intro-message-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+}
+
+.intro-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Jersey 15", serif; /* Apply font style to the entire document */
+}
+
+.playground {
+    width: 70vw;
+    height: 100vh;
+    border: 2px solid black;
+    background-image: url('../images/sandbg.webp'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire playground */
+    background-position: center; /* Centers the image */
+    position: relative;
+}
+
+.top-image, .bottom-image, .top-image-closed, .bottom-image-closed {
+    width: 300px; /* Fixed width */
+    height: 30vh; /* Maintain aspect ratio */
+    object-fit: cover;
+    object-position: top; /* Display the top section of the image */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1.5s ease-in-out; /* Slower transition */
+}
+
+.top-image {
+    top: 0;
+    transform: translateX(-50%) rotate(180deg); /* Flips the image upside down */
+    opacity: 0; /* Initially hidden */
+}
+
+.top-image-closed {
+    top: 0;
+    transform: translateX(-50%) rotate(180deg); /* Flips the image upside down */
+    opacity: 1; /* Initially visible */
+}
+
+.bottom-image {
+    bottom: 0;
+    transform: translateX(-50%);
+    opacity: 0; /* Initially hidden */
+}
+
+.bottom-image-closed {
+    bottom: 0;
+    transform: translateX(-50%);
+    opacity: 1; /* Initially visible */
+}
+
+.marbles {
+    display: flex;
+    flex-wrap: wrap; /* Allows the marbles to wrap */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    margin: 2vh 0; /* Adds margin to the flexbox */
+    transition: opacity 1.5s ease-in-out; /* Slower transition for marbles */
+}
+
+.top-marbles {
+    top: 15vh; /* Adjust the position as needed */
+}
+
+.bottom-marbles {
+    bottom: 15vh; /* Adjust the position as needed */
+}
+
+.marble {
+    width: 10%; /* Increased size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0.5%; /* Adjust the spacing as needed */
+}
+
+.button-container {
+    position: absolute;
+    bottom: 35vh; /* Position it above the number selector */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+    z-index: 1;
+}
+
+.odd-button, .even-button {
+    padding: 10px 20px; /* Adjust the padding as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+    cursor: pointer;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.odd-button:hover, .even-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.guess-label {
+    position: absolute;
+    bottom: 30vh; /* Position it above the number selector */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px; /* Adjust the font size as needed */
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+.number-selector {
+    position: absolute;
+    bottom: 28vh; /* Position it above the player's marbles */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+    text-align: center;
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+.message-container {
+    position: absolute;
+    top: 50%; /* Position it in the middle */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center; /* Center-align the text */
+}
+
+.message {
+    font-size: 18px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: red; /* Adjust the color as needed */
+}
+
+.flash-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px; /* Rounded corners */
+}
+
+.flash-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.flash-card-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.proceed-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.proceed-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.intro-message-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+}
+
+.intro-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Squid Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/home.css" />
+  </head>
+  <body>
+    <video id="intro-video" src="/video/intro.mp4" autoplay muted></video>
+    <audio id="background-music" src="/audio/intro.mp3" loop></audio>
+    <div class="banner">
+      <!-- recruiter img -->
+      <div class="recruiter">
+        <img src="/images/recruiter_pixel.png" alt="Recruiter" />
+      </div>
+
+      <!-- dialog -->
+      <div class="dialog" id="dialog">
+        <p id="dialog-text">
+            Hey there, ever feel like life’s got you in a corner? What if I told you there’s a way out—a game that could change everything for you. It’s simple, really. Win the game, and you walk away with the prize money. Lose, and your worries are over, no strings attached. Ready to take a chance?
+        </p>
+      </div>
+
+      <!-- input card -->
+      <div class="input-card" id="input-card">
+        <!-- card back -->
+        <div class="card-back" id="card-back">
+          <img src="/images/card_pixel.png" alt="Card Back" />
+        </div>
+
+        <!-- card front -->
+        <div class="card-front" id="card-front">
+          <img src="/images/card_front.png" alt="Card Front" />
+          <h2>Enter Your Details</h2>
+          <form id="user-details-form" action="/submit" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="birth-year">Birth Year:</label>
+            <input type="number" id="birth-year" name="birth-year" required />
+            <button type="submit">Submit</button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="/jsfiles/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+/* styles.css */
+body {
+  font-family: "Jersey 15", serif;
+  font-optical-sizing: auto;
+  font-style: normal; /* Pixelated font */
+  background-color: #000; /* Set a solid background color */
+  width: 100%;
+  height: 400px;
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ensure vertical alignment */
+}
+
+.recruiter {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: end;
+  height: auto;
+  display: none; /* Initially hidden */
+}
+
+.recruiter img {
+  width: 25rem;
+  height: auto;
+}
+
+.dialog {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  display: none; /* Initially hidden */
+}
+
+.dialog > p {
+  font-size: 2rem;
+}
+
+.input-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  display: none; /* Initially hidden */
+}
+
+.card-back, .card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-front {
+  background-color: #444;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front img {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.card-front h2, .card-front form {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+}
+
+.input-card.flipped .card-back {
+  transform: rotateY(180deg);
+}
+
+.input-card.flipped .card-front {
+  transform: rotateY(0deg);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label, input, button {
+  margin: 10px 0;
+}
+
+input{
+  border: burlywood;
+  width: 15rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  font-family: "Jersey 15", serif;
+  text-align: center;
+}
+
+button {
+  font-family: "Jersey 15", serif;
+  background-color: burlywood;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.25rem;
+
+}
+
+.typing {
+  border-right: .15em solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+}

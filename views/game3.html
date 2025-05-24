@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Playground</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/game3.css">
+</head>
+<body>
+    <div class="playground">
+        <div class="intro-message-container">
+            <p class="intro-message"></p>
+        </div>
+        <img src="/images/open_hand.png" class="top-image" alt="Computer">
+        <img src="/images/closed_hand.png" class="top-image-closed" alt="Computer Closed Hand">
+        <div class="marbles top-marbles">
+            <img src="/images/marble.png" alt="Marble" class="marble">
+            <img src="/images/marble2.png" alt="Marble" class="marble">
+            <img src="/images/marble3.png" alt="Marble" class="marble">
+            <img src="/images/marble4.png" alt="Marble" class="marble">
+            <img src="/images/marble5.png" alt="Marble" class="marble">
+            <img src="/images/marble.png" alt="Marble" class="marble">
+            <img src="/images/marble2.png" alt="Marble" class="marble">
+            <img src="/images/marble3.png" alt="Marble" class="marble">
+            <img src="/images/marble4.png" alt="Marble" class="marble">
+            <img src="/images/marble5.png" alt="Marble" class="marble">
+        </div>
+        <div class="button-container">
+            <button class="odd-button" disabled>Odd</button>
+            <button class="even-button" disabled>Even</button>
+        </div>
+        <label for="number-selector" class="guess-label">Guess :</label>
+        <input type="number" id="number-selector" class="number-selector" min="1" max="10" value="1" disabled>
+        <img src="/images/open_hand.png" class="bottom-image" alt="Player">
+        <img src="/images/closed_hand.png" class="bottom-image-closed" alt="Player Closed Hand">
+        <div class="marbles bottom-marbles">
+            <img src="/images/marble.png" alt="Marble" class="marble">
+            <img src="/images/marble2.png" alt="Marble" class="marble">
+            <img src="/images/marble3.png" alt="Marble" class="marble">
+            <img src="/images/marble4.png" alt="Marble" class="marble">
+            <img src="/images/marble5.png" alt="Marble" class="marble">
+            <img src="/images/marble.png" alt="Marble" class="marble">
+            <img src="/images/marble2.png" alt="Marble" class="marble">
+            <img src="/images/marble3.png" alt="Marble" class="marble">
+            <img src="/images/marble4.png" alt="Marble" class="marble">
+            <img src="/images/marble5.png" alt="Marble" class="marble">
+        </div>
+        <div class="message-container">
+            <p class="message"></p>
+        </div>
+        <div class="flash-card" style="display: none;">
+            <img src="/images/card_pixel.png" alt="Flash Card" class="flash-card-image">
+            <p class="flash-card-message"></p>
+            <!-- <button class="proceed-button" onclick="proceed('/home')">Proceed</button> -->
+        </div>
+    </div>
+    <script src="/jsfiles/game3.js"></script>
+</body>
+</html>
+
+

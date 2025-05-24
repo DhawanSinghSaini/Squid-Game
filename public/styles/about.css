@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-color: black;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #7f0000; /* Darker red color */
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  nav {
+    display: flex;
+    margin-left: 1rem;
+    gap: 1rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .play {
+    margin-left: auto;
+  }
+  
+  main {
+    padding: 2rem;
+    margin: 0 4rem; /* Add more margin on left and right */
+  }
+  
+  h1, h2 {
+    font-weight: 700;
+    color: #d10000;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    margin-left: 2rem; /* Add margin on left */
+    margin-right: 2rem; /* Add margin on right */
+  }
+  
+  ul {
+    list-style: disc;
+    padding-left: 2rem; /* Indentation for list items */
+    margin-bottom: 1rem;
+    margin-left: 2rem; /* Add margin on left */
+    margin-right: 2rem; /* Add margin on right */
+  }
+  
+  li {
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  

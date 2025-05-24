@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Light / Green Light Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/game1.css">
+</head>
+<body>
+    <div id="gameArea">
+        <div class="intro" id="intro"></div>
+        <div class="timer" id="timer">01:30</div>
+        <div class="doll"></div>
+        <div class="line"></div> <!-- Added white line -->
+        <div class="small-doll left"></div>
+        <div class="small-doll right"></div>
+        <div class="player" id="player1"></div>
+        <div class="flash-card" id="flashCard">
+            <p>Player 456 Pass</p>
+            <button onclick="proceed('/proceed1')">Proceed</button>
+        </div>
+    </div>
+    <script src="/jsfiles/game1.js"></script>
+</body>
+</html>
+
+
+
